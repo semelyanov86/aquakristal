@@ -11,6 +11,11 @@
                         <button class="rd-navbar-toggle" data-rd-navbar-toggle="#rd-navbar-nav-wrap-1"><span></span></button>
                         <!-- RD Navbar Brand--><a class="rd-navbar-brand" href="index.html"><img src="images/logo-default-132x34.png" alt="" width="132" height="34" srcset="images/logo-default-250x64.png 2x"/></a>
                     </div>
+                    <div class="rd-navbar-minimal">
+                        @foreach (LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
+                            <a rel = "alternate" hreflang = "{{$localeCode}}" href = "{{LaravelLocalization::getLocalizedURL($localeCode) }}"> {{ $properties ['native'] }} </a>
+                        @endforeach
+                    </div>
                     <div class="rd-navbar-main-element">
                         <div class="rd-navbar-nav-wrap" id="rd-navbar-nav-wrap-1">
                             <!-- RD Navbar Nav-->
