@@ -19,9 +19,7 @@ Route::group(
     function()
     {
         /** ADD ALL LOCALIZED ROUTES INSIDE THIS GROUP **/
-        Route::get('/', function () {
-            return view('welcome');
-        })->name('main');
+        Route::get('/', 'MainController@welcome')->name('main');
 
 
     });

@@ -2,5 +2,6 @@
 
 return [
   'documentation' => 'Documentation',
-  'news' => 'News'  
+  'news' => 'News',
+    'learn-more' => 'Learn more'
 ];
