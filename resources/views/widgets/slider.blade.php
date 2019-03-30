@@ -13,28 +13,12 @@
                                 <p class="text-op-gentle wow" data-caption-animate="slideInLeft">{{$post->meta_description}}</p>
                             </div>
                         </div>
-                        <div class="wow-outer button-outer"><a class="button button-lg button-primary button-winona wow" href="about-us.html" data-caption-animate="slideInUp">@lang('app.learn-more')</a></div>
+                        <div class="wow-outer button-outer"><a class="button button-lg button-primary button-winona wow" href="{{route('post.show', ['slug' => $post->slug])}}" data-caption-animate="slideInUp">@lang('app.learn-more')</a></div>
                     </div>
                 </div>
             </div>
         </div>
         @endforeach
-        {{--<div class="swiper-slide" data-slide-bg="images/slider-business-slide-2-1920x800.jpg">
-            <div class="slide-inner">
-                <div class="swiper-slide-caption">
-                    <div class="container">
-                        <h1 class="wow-outer"><span class="wow" data-caption-animate="slideInDown"><span class="big">Drink</span></span></h1>
-                        <h2 class="wow-outer"><span class="wow" data-caption-animate="slideInDown"><span class="compressed fown-weight-light">Healthy Water</span></span></h2>
-                        <div class="swiper-caption-text-sm swiper-caption-wrap">
-                            <div class="swiper-caption-text-inner">
-                                <p class="text-op-gentle wow" data-caption-animate="slideInLeft">We provide spring water that positively influences your health and is safe to drink.</p>
-                            </div>
-                        </div>
-                        <div class="wow-outer button-outer"><a class="button button-lg button-primary button-winona wow" href="about-us.html" data-caption-animate="slideInUp">Learn more</a></div>
-                    </div>
-                </div>
-            </div>
-        </div>--}}
     </div>
     <div class="swiper-slider-nav container">
         <div class="swiper-button-prev"></div>

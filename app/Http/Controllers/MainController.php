@@ -10,7 +10,12 @@ class MainController extends Controller
 {
     public function welcome()
     {
-        $posts = Post::where('category_id', 2)->get();
+        $posts = Post::where('category_id', 2)->where('status', 'PUBLISHED')->where('featured', 1)->get();
         return view('welcome', compact('posts'));
+    }
+
+    public function showPost(Post $post)
+    {
+        return view('single-blog-post', compact('post'));
     }
 }
