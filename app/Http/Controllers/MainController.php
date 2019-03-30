@@ -16,6 +16,7 @@ class MainController extends Controller
 
     public function showPost(Post $post)
     {
-        return view('single-blog-post', compact('post'));
+        $feature = Post::where('category_id', 1)->where('status', 'PUBLISHED')->where('featured', 1)->first();
+        return view('single-blog-post', compact('post'))->with('feature', $feature);
     }
 }

@@ -7,5 +7,6 @@ return [
     'home' => 'Home',
     'blog' => 'Blog',
     'share' => 'Share this post',
-    'ask-question' => 'Ask question'
+    'ask-question' => 'Ask question',
+    'more' => 'More'
 ];

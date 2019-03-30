@@ -7,5 +7,6 @@ return [
     'home' => 'Home',
     'blog' => 'Blog',
     'share' => 'Поделиться этой новостью',
-    'ask-question' => 'Задать вопрос'
+    'ask-question' => 'Задать вопрос',
+    'more' => 'Подробнее'
 ];
