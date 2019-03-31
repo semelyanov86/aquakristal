@@ -8,5 +8,6 @@ return [
     'blog' => 'Blog',
     'share' => 'Поделиться этой новостью',
     'ask-question' => 'Задать вопрос',
-    'more' => 'Подробнее'
+    'more' => 'Подробнее',
+    'read-more' => 'Read More'
 ];

@@ -9,7 +9,7 @@
                     <div class="rd-navbar-panel">
                         <!-- RD Navbar Toggle-->
                         <button class="rd-navbar-toggle" data-rd-navbar-toggle="#rd-navbar-nav-wrap-1"><span></span></button>
-                        <!-- RD Navbar Brand--><a class="rd-navbar-brand" href="index.html"><img src="/images/logo-default-132x34.png" alt="" width="132" height="34" srcset="/images/logo-default-250x64.png 2x"/></a>
+                        <!-- RD Navbar Brand--><a class="rd-navbar-brand" href="{{route('main')}}"><img src="/images/logo-default-132x34.png" alt="" width="132" height="34" srcset="/images/logo-default-250x64.png 2x"/></a>
                     </div>
                     <div class="rd-navbar-minimal">
                         @foreach (LaravelLocalization::getSupportedLocales() as $localeCode => $properties)

@@ -5,13 +5,15 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Category;
 use App\Post;
+use App\Page;
 
 class MainController extends Controller
 {
     public function welcome()
     {
+        $pages = Page::all();
         $posts = Post::where('category_id', 2)->where('status', 'PUBLISHED')->where('featured', 1)->get();
-        return view('welcome', compact('posts'));
+        return view('welcome', compact('posts'))->with('pages', $pages);
     }
 
     public function showPost(Post $post)

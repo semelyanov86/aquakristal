@@ -1,5 +1,5 @@
 @extends('master')
-@section('title', $post->seo_title)
+@section('title', $post->getTranslatedAttribute('seo_title', 'locale', App::getlocale()))
 @section('content')
     <!-- Breadcrumbs -->
     <section class="breadcrumbs-custom bg-image context-dark" style="background-image: url(/images/breadcrumbs-image-1.jpg);">
@@ -7,12 +7,12 @@
             <div class="container breadcrumbs-custom-container">
                 <div class="breadcrumbs-custom-main">
                     <h6 class="breadcrumbs-custom-subtitle title-decorated">{{$post->Category->name}}</h6>
-                    <h1 class="breadcrumbs-custom-title">{{$post->seo_title}}</h1>
+                    <h1 class="breadcrumbs-custom-title">{{$post->getTranslatedAttribute('seo_title', 'locale', App::getlocale())}}</h1>
                 </div>
                 <ul class="breadcrumbs-custom-path">
                     <li><a href="/">@lang('app.home')</a></li>
                     <li><a href="{{route('post.index')}}">@lang('app.blog')</a></li>
-                    <li class="active">{{$post->seo_title}}</li>
+                    <li class="active">{{$post->getTranslatedAttribute('seo_title', 'locale', App::getlocale())}}</li>
                 </ul>
             </div>
         </div>
@@ -22,15 +22,15 @@
             <div class="row row-50">
                 <div class="col-lg-8">
                     <article class="post-creative">
-                        <h3 class="post-creative-title">{{$post->title}}</h3>
+                        <h3 class="post-creative-title">{{$post->getTranslatedAttribute('title', 'locale', App::getlocale())}}</h3>
                         <ul class="post-creative-meta">
                             <li><span class="icon mdi mdi-calendar-clock"></span>
                                 <time datetime="{{ \Carbon\Carbon::parse($post->updated_at)->format('d/m/Y')}}">{{ \Carbon\Carbon::parse($post->updated_at)->format('d/m/Y')}}</time>
                             </li>
                             <li><span class="icon mdi mdi-tag-multiple"></span><a href="#">{{$post->Category->name}}</a></li>
                         </ul>
-                        <h4>{{$post->excerpt}}</h4><img src="/storage/{{$post->image}}" alt="" width="770"/>
-                        {!! $post->body !!}
+                        <h4>{{$post->getTranslatedAttribute('excerpt', 'locale', App::getlocale())}}</h4><img src="/storage/{{$post->image}}" alt="" width="770"/>
+                        {!! $post->getTranslatedAttribute('body', 'locale', App::getlocale()) !!}
                         <ul class="post-creative-footer">
                             <li>@lang('app.share')</li>
                             <li>
