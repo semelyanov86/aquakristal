@@ -21,7 +21,7 @@ Route::group(
         /** ADD ALL LOCALIZED ROUTES INSIDE THIS GROUP **/
         Route::get('/', 'MainController@welcome')->name('main');
         Route::get('/blog/{slug}', 'MainController@showPost')->name('post.show');
-        Route::get('/blog/', 'MainController@index')->name('post.index');
+        Route::get('/blog/', 'MainController@blogIndex')->name('post.index');
 
     });
 

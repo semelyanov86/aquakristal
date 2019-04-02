@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "9cec9fda1c4ebf7707e687c47553ce8d",
+    "content-hash": "eed81ee0d2f52ada5b716753bd84b269",
     "packages": [
         {
             "name": "arrilot/laravel-widgets",
@@ -67,6 +67,60 @@
                 "widgets"
             ],
             "time": "2019-03-25T14:20:55+00:00"
+        },
+        {
+            "name": "clystnet/vtiger",
+            "version": "1.5.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Clystnet/Vtiger.git",
+                "reference": "a0e690038492b92803f15554b0ec8ce062061b9e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Clystnet/Vtiger/zipball/a0e690038492b92803f15554b0ec8ce062061b9e",
+                "reference": "a0e690038492b92803f15554b0ec8ce062061b9e",
+                "shasum": ""
+            },
+            "require": {
+                "guzzlehttp/guzzle": "~6.0",
+                "php": ">=5.6.0"
+            },
+            "type": "laravel",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Clystnet\\Vtiger\\VtigerServiceProvider"
+                    ],
+                    "aliases": {
+                        "Vtiger": "Clystnet\\Vtiger\\Facades\\Vtiger"
+                    }
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Clystnet\\Vtiger\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Adam Godfrey",
+                    "email": "adam.godfrey@clystnet.com",
+                    "homepage": "https://www.clystnet.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Package to run Vtiger Webservice API",
+            "homepage": "https://github.com/Clystnet/Vtiger",
+            "keywords": [
+                "laravel",
+                "vtiger"
+            ],
+            "time": "2018-11-14T08:59:02+00:00"
         },
         {
             "name": "composer/ca-bundle",

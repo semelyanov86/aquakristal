@@ -13,5 +13,7 @@ return [
     'our-products' => 'Our Products',
     'view-more' => 'View More',
     'testimonials' => 'Отзывы',
-    'contact' => 'Контактная информация'
+    'contact' => 'Контактная информация',
+    'latest-blog' => 'Latest Blog Posts',
+    'view-all' => 'View All Posts'
 ];

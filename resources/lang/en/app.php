@@ -13,5 +13,7 @@ return [
     'our-products' => 'Our Products',
     'view-more' => 'View More',
     'testimonials' => 'Testimonials',
-    'contact' => 'Contact Information'
+    'contact' => 'Contact Information',
+    'latest-blog' => 'Latest Blog Posts',
+    'view-all' => 'View All Posts'
 ];
