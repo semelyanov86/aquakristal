@@ -18,5 +18,6 @@ return [
     'view-all' => 'View All Posts',
     'view-history' => 'View Our History',
     'join-team' => 'Join Our Team',
-    'about-us' => 'Some facts about us'
+    'about-us' => 'Some facts about us',
+    'order' => 'Order Now'
 ];

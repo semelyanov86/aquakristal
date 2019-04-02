@@ -24,6 +24,8 @@ Route::group(
         Route::get('/blog/', 'MainController@blogIndex')->name('post.index');
         Route::get('/about/', 'MainController@aboutUs')->name('about');
         Route::get('/page/{slug}', 'MainController@showPage')->name('page.show');
+        Route::get('/products', 'MainController@showProducts')->name('product.index');
+        Route::get('/contacts', 'MainController@contacts')->name('contacts');
 
     });
 
