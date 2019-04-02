@@ -33,4 +33,11 @@ class MainController extends Controller
         $posts = Post::where('category_id', 1)->where('status', 'PUBLISHED')->latest()->paginate(4);
         return view('blog', compact('posts'))->with('pages', $pages);
     }
+
+    public function aboutUs()
+    {
+        $pages = Page::all();
+        $timelines = Post::where('category_id', 4)->where('status', 'PUBLISHED')->get();
+        return view('about-us', compact('pages'))->with('timelines', $timelines);
+    }
 }

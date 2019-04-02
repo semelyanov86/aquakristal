@@ -15,5 +15,7 @@ return [
     'testimonials' => 'Testimonials',
     'contact' => 'Contact Information',
     'latest-blog' => 'Latest Blog Posts',
-    'view-all' => 'View All Posts'
+    'view-all' => 'View All Posts',
+    'view-history' => 'View Our History',
+    'join-team' => 'Join Our Team'
 ];
