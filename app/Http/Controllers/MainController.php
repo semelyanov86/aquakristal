@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Category;
 use App\Post;
 use App\Page;
+use App\Product;
 
 class MainController extends Controller
 {
@@ -13,7 +14,9 @@ class MainController extends Controller
     {
         $pages = Page::all();
         $posts = Post::where('category_id', 2)->where('status', 'PUBLISHED')->where('featured', 1)->get();
-        return view('welcome', compact('posts'))->with('pages', $pages);
+        $products = Product::where('status', 1)->get();
+        $testimonials = Post::where('category_id', 3)->where('status', 'PUBLISHED')->get();
+        return view('welcome', compact('posts'))->with('pages', $pages)->with('products', $products)->with('testimonials', $testimonials);
     }
 
     public function showPost(Post $post)

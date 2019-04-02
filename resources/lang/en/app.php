@@ -9,5 +9,8 @@ return [
     'share' => 'Share this post',
     'ask-question' => 'Ask question',
     'more' => 'More',
-    'read-more' => 'Read More'
+    'read-more' => 'Read More',
+    'our-products' => 'Our Products',
+    'view-more' => 'View More',
+    'testimonials' => 'Testimonials'
 ];

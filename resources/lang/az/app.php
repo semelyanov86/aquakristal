@@ -9,5 +9,8 @@ return [
     'share' => 'Поделиться этой новостью',
     'ask-question' => 'Задать вопрос',
     'more' => 'Подробнее',
-    'read-more' => 'Read More'
+    'read-more' => 'Read More',
+    'our-products' => 'Our Products',
+    'view-more' => 'View More',
+    'testimonials' => 'Отзывы'
 ];
