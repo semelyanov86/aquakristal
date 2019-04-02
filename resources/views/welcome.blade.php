@@ -18,7 +18,7 @@
                     <div class="inset-right-3">
                         <h3 class="wow-outer"><span class="wow slideInDown">{{$pages[0]->getTranslatedAttribute('title', 'locale', App::getlocale())}}</span></h3>
                         <p class="text-op-amaranthine wow-outer"><span class="wow slideInDown" data-wow-delay=".05s">{{$pages[0]->getTranslatedAttribute('excerpt', 'locale', App::getlocale())}}</span></p>
-                        <div class="wow-outer button-outer"><a class="button button-lg button-primary button-winona wow slideInDown" data-wow-delay=".1s" href="about-us.html">@lang('app.learn-more')</a></div>
+                        <div class="wow-outer button-outer"><a class="button button-lg button-primary button-winona wow slideInDown" data-wow-delay=".1s" href="{{route('page.show', ['slug' => $pages[0]->slug])}}">@lang('app.learn-more')</a></div>
                     </div>
                 </div>
                 <div class="col-lg-7"><img src="/storage/{{$pages[0]->image}}" alt="" width="711" height="429"/>
@@ -45,7 +45,7 @@
                         </div>
                         <div class="wow-outer offset-top-4">
                             <div class="wow slideInDown">
-                                <p>{{$pages[1]->getTranslatedAttribute('excerpt', 'locale', App::getlocale())}}</p><a class="button button-primary button-winona" href="#">@lang('app.read-more')</a>
+                                <p>{{$pages[1]->getTranslatedAttribute('excerpt', 'locale', App::getlocale())}}</p><a class="button button-primary button-winona" href="{{route('page.show', ['slug' => $pages[1]->slug])}}">@lang('app.read-more')</a>
                             </div>
                         </div>
                     </div>

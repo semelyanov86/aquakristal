@@ -23,6 +23,7 @@ Route::group(
         Route::get('/blog/{slug}', 'MainController@showPost')->name('post.show');
         Route::get('/blog/', 'MainController@blogIndex')->name('post.index');
         Route::get('/about/', 'MainController@aboutUs')->name('about');
+        Route::get('/page/{slug}', 'MainController@showPage')->name('page.show');
 
     });
 

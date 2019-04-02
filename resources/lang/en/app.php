@@ -17,5 +17,6 @@ return [
     'latest-blog' => 'Latest Blog Posts',
     'view-all' => 'View All Posts',
     'view-history' => 'View Our History',
-    'join-team' => 'Join Our Team'
+    'join-team' => 'Join Our Team',
+    'about-us' => 'Some facts about us'
 ];

@@ -27,6 +27,13 @@ class MainController extends Controller
         return view('single-blog-post', compact('post'))->with('feature', $feature)->with('pages', $pages);
     }
 
+    public function showPage(Page $page)
+    {
+        $pages = Page::all();
+        $feature = Post::where('category_id', 1)->where('status', 'PUBLISHED')->where('featured', 1)->first();
+        return view('single-page-post', compact('page'))->with('feature', $feature)->with('pages', $pages);
+    }
+
     public function blogIndex()
     {
         $pages = Page::all();

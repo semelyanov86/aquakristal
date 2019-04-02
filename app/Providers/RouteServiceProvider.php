@@ -5,6 +5,7 @@ namespace App\Providers;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Foundation\Support\Providers\RouteServiceProvider as ServiceProvider;
 use App\Post;
+use App\Page;
 
 class RouteServiceProvider extends ServiceProvider
 {
@@ -26,6 +27,9 @@ class RouteServiceProvider extends ServiceProvider
     {
         Route::bind('slug', function($slug){
            $post = Post::where('slug', $slug)->first();
+           if (!$post) {
+               $post = Page::where('slug', $slug)->first();
+           }
            return $post ? $post : abort(404);
         });
 
