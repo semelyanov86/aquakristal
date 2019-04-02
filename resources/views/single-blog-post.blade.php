@@ -1,5 +1,7 @@
 @extends('master')
 @section('title', $post->getTranslatedAttribute('seo_title', 'locale', App::getlocale()))
+@section('description', $post->meta_description)
+@section('keywords', $post->meta_keywords)
 @section('content')
     <!-- Breadcrumbs -->
     <section class="breadcrumbs-custom bg-image context-dark" style="background-image: url(/images/breadcrumbs-image-1.jpg);">

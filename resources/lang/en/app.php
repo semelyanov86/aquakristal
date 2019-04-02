@@ -12,5 +12,6 @@ return [
     'read-more' => 'Read More',
     'our-products' => 'Our Products',
     'view-more' => 'View More',
-    'testimonials' => 'Testimonials'
+    'testimonials' => 'Testimonials',
+    'contact' => 'Contact Information'
 ];

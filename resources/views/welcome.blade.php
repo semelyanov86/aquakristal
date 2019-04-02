@@ -1,5 +1,7 @@
 @extends('master')
-        @section('title', 'Home')
+        @section('title', setting('site.title'))
+        @section('description', setting('site.description'))
+        @section('keywords', $pages[0]->meta_keywords)
         @section('content')
 @include('widgets.slider')
     <!-- A Few Words About Us-->
