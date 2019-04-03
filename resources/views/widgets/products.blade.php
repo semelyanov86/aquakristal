@@ -22,7 +22,7 @@
         </div>
         <div class="row justify-content-center text-center row-offset-custom-1">
             <div class="col-12">
-                <div class="wow-outer button-outer"><a class="button button-lg button-primary button-winona wow slideInDown" data-wow-delay=".1s" href="about-us.html">@lang('app.view-more')</a></div>
+                <div class="wow-outer button-outer"><a class="button button-lg button-primary button-winona wow slideInDown" data-wow-delay=".1s" href="{{route('product.index')}}">@lang('app.view-more')</a></div>
             </div>
         </div>
     </div>

@@ -19,5 +19,6 @@ return [
     'view-history' => 'View Our History',
     'join-team' => 'Join Our Team',
     'about-us' => 'Some facts about us',
-    'order' => 'Order Now'
+    'order' => 'Order Now',
+    'join-us' => 'Join Us'
 ];

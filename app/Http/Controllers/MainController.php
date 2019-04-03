@@ -62,4 +62,12 @@ class MainController extends Controller
         $curParge = Page::whereId(10)->first();
         return view('water', compact('products'))->with('pages', $pages)->with('current', $curParge);
     }
+
+    public function career()
+    {
+        $pages = Page::all();
+        $post = Post::whereId(17)->first();
+        $curParge = Page::whereId(12)->first();
+        return view('careers', compact('pages'))->with('post', $post)->with('current', $curParge);
+    }
 }

@@ -26,6 +26,7 @@ Route::group(
         Route::get('/page/{slug}', 'MainController@showPage')->name('page.show');
         Route::get('/products', 'MainController@showProducts')->name('product.index');
         Route::get('/contacts', 'MainController@contacts')->name('contacts');
+        Route::get('/career', 'MainController@career')->name('careers');
 
     });
 

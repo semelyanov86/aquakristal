@@ -26,7 +26,7 @@
                 <h3>{{$pages[8]->getTranslatedAttribute('title', 'locale', App::getlocale())}}</h3>
                 <h4 class="offset-top-3">{{$pages[8]->getTranslatedAttribute('excerpt', 'locale', App::getlocale())}}</h4>
                 {!! $pages[8]->getTranslatedAttribute('body', 'locale', App::getlocale()) !!}
-                <div class="group group-middle"><a class="button button-primary button-winona" href="#our-history" data-waypoint-to="#our-history">@lang('app.view-history')</a><a class="button button-primary-outline button-winona" href="careers.html">@lang('app.join-team')</a></div>
+                <div class="group group-middle"><a class="button button-primary button-winona" href="#our-history" data-waypoint-to="#our-history">@lang('app.view-history')</a><a class="button button-primary-outline button-winona" href="{{route('careers')}}">@lang('app.join-team')</a></div>
             </div>
             <div class="col-md-10 col-lg-6 col-xl-5 align-self-end"><img class="img-responsive" src="/storage/{{$pages[8]->image}}" alt="" width="510" height="482"/>
             </div>
