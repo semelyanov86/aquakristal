@@ -70,4 +70,11 @@ class MainController extends Controller
         $curParge = Page::whereId(12)->first();
         return view('careers', compact('pages'))->with('post', $post)->with('current', $curParge);
     }
+
+    public function privacy()
+    {
+        $pages = Page::all();
+        $current = Page::whereId(13)->first();
+        return view('privacy-policy', compact('pages'))->with('current', $current);
+    }
 }

@@ -45,7 +45,7 @@
     <div class="container">
         <div class="footer-standard-aside justify-content-center">
             <!-- Rights-->
-            <p class="rights"><span>&copy;&nbsp;</span><span class="copyright-year"></span><span>&nbsp;</span><span>All Rights Reserved.</span><span>&nbsp;</span><br class="d-sm-none"/><a href="#">Terms of Use</a><span> and</span><span>&nbsp;</span><a href="terms-of-use.html">Privacy Policy</a></p>
+            <p class="rights"><span>&copy;&nbsp;</span><span class="copyright-year"></span><span>&nbsp;</span><span>All Rights Reserved.</span><span>&nbsp;</span><br class="d-sm-none"/>Our<span> </span><span>&nbsp;</span><a href="privacy-policy">Privacy Policy</a></p>
         </div>
     </div>
 </footer>

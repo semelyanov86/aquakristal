@@ -27,6 +27,7 @@ Route::group(
         Route::get('/products', 'MainController@showProducts')->name('product.index');
         Route::get('/contacts', 'MainController@contacts')->name('contacts');
         Route::get('/career', 'MainController@career')->name('careers');
+        Route::get('/privacy-policy', 'MainController@privacy')->name('privacy');
 
     });
 
