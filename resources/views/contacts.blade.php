@@ -49,47 +49,74 @@
                 <div class="row">
                     <div class="col-lg-9 cell-inner">
                         <div class="section-lg">
-                            <h3 class="wow-outer"><span class="wow slideInDown">Contact Us</span></h3>
+                            <h3 class="wow-outer"><span class="wow slideInDown">@lang('app.contact-us')</span></h3>
                             <!-- RD Mailform-->
-                            <form class="rd-form rd-mailform" data-form-output="form-output-global" data-form-type="contact" method="post" action="bat/rd-mailform.php">
+                            <form class="rd-form rd-mailform" data-form-output="form-output-global" data-form-type="contact" method="post" action="{{route('store')}}">
+                                @csrf
+                                <input type="hidden" name="leadsource" value="Форма обратной связи">
+                                <input type="hidden" name="assigned_user_id" value="4x1">
                                 <div class="row row-10">
                                     <div class="col-md-6 wow-outer">
-                                        <div class="form-wrap wow fadeSlideInUp">
-                                            <label class="form-label-outside" for="contact-first-name">First Name</label>
-                                            <input class="form-input" id="contact-first-name" type="text" name="name" data-constraints="@Required">
+                                        <div class="form-wrap wow fadeSlideInUp {{$errors->has('firstname') ? 'has-error' : ''}}">
+                                            <label class="form-label-outside" for="contact-first-name">@lang('app.first-name')</label>
+                                            <input class="form-input" id="contact-first-name" type="text" name="firstname" value="{{old('firstname')}}" data-constraints="@Required">
+                                            @if($errors->has('firstname'))
+                                                <div>
+                                                    <span class="form-validation">{{$errors->first('firstname')}}</span>
+                                                </div>
+                                            @endif
                                         </div>
                                     </div>
                                     <div class="col-md-6 wow-outer">
-                                        <div class="form-wrap wow fadeSlideInUp">
-                                            <label class="form-label-outside" for="contact-last-name">Last Name</label>
-                                            <input class="form-input" id="contact-last-name" type="text" name="name" data-constraints="@Required">
+                                        <div class="form-wrap wow fadeSlideInUp {{$errors->has('lastname') ? 'has-error' : ''}}">
+                                            <label class="form-label-outside" for="contact-last-name">@lang('app.last-name')</label>
+                                            <input class="form-input" id="contact-last-name" type="text" name="lastname" value="{{old('lastname')}}" data-constraints="@Required">
+                                            @if($errors->has('lastname'))
+
+                                                    <span class="form-validation">{{$errors->first('lastname')}}</span>
+
+                                            @endif
                                         </div>
                                     </div>
                                     <div class="col-md-6 wow-outer">
-                                        <div class="form-wrap wow fadeSlideInUp">
+                                        <div class="form-wrap wow fadeSlideInUp {{$errors->has('email') ? 'has-error' : ''}}">
                                             <label class="form-label-outside" for="contact-email">E-mail</label>
-                                            <input class="form-input" id="contact-email" type="email" name="email" data-constraints="@Email @Required">
+                                            <input class="form-input" id="contact-email" type="email" name="email" value="{{old('email')}}" data-constraints="@Email @Required">
+                                            @if($errors->has('email'))
+
+                                                    <span class="form-validation">{{$errors->first('email')}}</span>
+
+                                            @endif
                                         </div>
                                     </div>
                                     <div class="col-md-6 wow-outer">
-                                        <div class="form-wrap wow fadeSlideInUp">
-                                            <label class="form-label-outside" for="contact-phone">Phone</label>
-                                            <input class="form-input" id="contact-phone" type="text" name="phone" data-constraints="@PhoneNumber">
+                                        <div class="form-wrap wow fadeSlideInUp {{$errors->has('phone') ? 'has-error' : ''}}">
+                                            <label class="form-label-outside" for="contact-phone">@lang('app.phone')</label>
+                                            <input class="form-input " id="contact-phone" type="text" name="phone" value="{{old('phone')}}" data-constraints="@PhoneNumber">
+                                            @if($errors->has('phone'))
+
+                                                    <span class="form-validation">{{$errors->first('phone')}}</span>
+
+                                            @endif
                                         </div>
                                     </div>
                                     <div class="col-12 wow-outer">
-                                        <div class="form-wrap wow fadeSlideInUp">
-                                            <label class="form-label-outside" for="contact-message">Your Message</label>
-                                            <textarea class="form-input" id="contact-message" name="message" data-constraints="@Required"></textarea>
+                                        <div class="form-wrap wow fadeSlideInUp {{$errors->has('description') ? 'has-error' : ''}}">
+                                            <label class="form-label-outside" for="contact-message">@lang('app.your-message')</label>
+                                            <textarea class="form-input" id="contact-message" name="description" data-constraints="@Required">{{old('description')}}</textarea>
+                                            @if($errors->has('description'))
+                                                <span class="form-validation">{{$errors->first('description')}}</span>
+
+                                            @endif
                                         </div>
                                     </div>
                                 </div>
                                 <div class="group group-middle">
                                     <div class="wow-outer">
-                                        <button class="button button-primary button-winona wow slideInRight" type="submit">Send Message</button>
+                                        <button class="button button-primary button-winona wow slideInRight" type="submit">@lang('app.send-message')</button>
                                     </div>
-                                    <p>or use</p>
-                                    <div class="wow-outer"><a class="button button-primary-outline button-icon button-icon-left button-winona wow slideInLeft" href="#"><span class="icon text-primary mdi mdi-facebook-messenger"></span>Messenger</a></div>
+{{--                                    <p>or use</p>
+                                    <div class="wow-outer"><a class="button button-primary-outline button-icon button-icon-left button-winona wow slideInLeft" href="#"><span class="icon text-primary mdi mdi-facebook-messenger"></span>Messenger</a></div>--}}
                                 </div>
                             </form>
                         </div>

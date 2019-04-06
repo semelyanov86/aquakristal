@@ -3,10 +3,13 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Validator;
 use App\Category;
 use App\Post;
 use App\Page;
 use App\Product;
+use Clystnet\Vtiger\Vtiger;
+use Clystnet\Vtiger\VtigerError;
 
 class MainController extends Controller
 {
@@ -76,5 +79,40 @@ class MainController extends Controller
         $pages = Page::all();
         $current = Page::whereId(13)->first();
         return view('privacy-policy', compact('pages'))->with('current', $current);
+    }
+
+    public function store(Request $request)
+    {
+        $validator = Validator::make($request->all(), [
+            'lastname' => 'required|max:255',
+            'email' => 'sometimes|required|email',
+            'phone' => 'digits_between:5,15',
+            'leadsource' => 'required|min:5',
+            'assigned_user_id' => 'required|min:3',
+            'firstname' => 'sometimes|max:200',
+            'description' => 'sometimes|min:10'
+//            'g-recaptcha-response' => 'required|captcha',
+        ]);
+        if ($validator->fails()) {
+            return redirect()->back()
+                ->withErrors($validator)
+                ->withInput();
+        }
+        $data = array(
+            'assigned_user_id' => $request->assigned_user_id,
+            'lastname' => $request->lastname,
+            'email' => $request->email,
+            'phone' => $request->phone,
+            'firstname' => $request->firstname,
+            'description' => $request->description,
+            'leadsource' => $request->leadsource
+        );
+        $vtigerModel = new Vtiger();
+        try {
+            $vtigerModel->create('Accounts', json_encode($data));
+        } catch (VtigerError $ex) {
+            echo $ex->getMessage();
+        }
+        return redirect()->back()->with('success', 'Thanks for contacting with us');
     }
 }

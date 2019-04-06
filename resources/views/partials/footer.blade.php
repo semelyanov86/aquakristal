@@ -28,16 +28,7 @@
                 <div class="col-sm-6 col-md-7 col-lg-4">
                     <h4>{{$pages[5]->getTranslatedAttribute('title', 'locale', App::getlocale())}}</h4>
                     {!! $pages[5]->getTranslatedAttribute('body', 'locale', App::getlocale()) !!}
-                    <!-- RD Mailform-->
-                    <form class="rd-form rd-mailform form-inline" data-form-output="form-output-global" data-form-type="subscribe" method="post" action="bat/rd-mailform.php">
-                        <div class="form-wrap">
-                            <input class="form-input" id="subscribe-form-2-email" type="email" name="email" data-constraints="@Email @Required">
-                            <label class="form-label" for="subscribe-form-2-email">{{$pages[5]->getTranslatedAttribute('excerpt', 'locale', App::getlocale())}}</label>
-                        </div>
-                        <div class="form-button">
-                            <button class="button button-primary button-icon button-icon-only button-winona" type="submit" aria-label="submit"><span class="icon mdi mdi-email-outline"></span></button>
-                        </div>
-                    </form>
+@include('.partials.form-mail')
                 </div>
             </div>
         </div>
