@@ -29,5 +29,5 @@ return [
     'last-name' => 'Last name',
     'phone' => 'Phone',
     'your-message' => 'Your message',
-    'send-message' => 'Send message'
+    'send-message' => 'Send message',
 ];
