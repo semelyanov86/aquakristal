@@ -4,7 +4,7 @@
     <form class="rd-form rd-mailform" data-form-output="form-output-global" data-form-type="contact" method="post" action="{{route('store')}}">
         @csrf
         <input type="hidden" name="leadsource" value="Форма обратной связи">
-        <input type="hidden" name="assigned_user_id" value="4x1">
+        <input type="hidden" name="assigned_user_id" value="4x2">
         <div class="row row-10">
             <div class="col-md-6">
                 <div class="form-wrap {{$errors->has('firstname') ? 'has-error' : ''}}">

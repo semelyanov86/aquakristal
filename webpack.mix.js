@@ -11,12 +11,12 @@ const mix = require('laravel-mix');
  |
  */
 
-mix.js('resources/js/app.js', 'public/js')
-    .js('resources/js/script.js', 'public/js')
-    .js('resources/js/html5shiv.min.js', 'public/js')
-    .js('resources/js/pointer-events.min.js', 'public/js')
+mix.js('resources/js/app.js', 'public_html/js')
+    .js('resources/js/script.js', 'public_html/js')
+    .js('resources/js/html5shiv.min.js', 'public_html/js')
+    .js('resources/js/pointer-events.min.js', 'public_html/js')
     .styles(['resources/css/fonts.css',
     'resources/css/style.css',
         'resources/css/bootstrap.css'
     ], 'public/css/styles.css')
-   .sass('resources/sass/app.scss', 'public/css');
+   .sass('resources/sass/app.scss', 'public_html/css');

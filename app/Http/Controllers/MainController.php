@@ -109,7 +109,7 @@ class MainController extends Controller
         );
         $vtigerModel = new Vtiger();
         try {
-            $vtigerModel->create('Accounts', json_encode($data));
+            $vtigerModel->create('Leads', json_encode($data));
         } catch (VtigerError $ex) {
             echo $ex->getMessage();
         }
